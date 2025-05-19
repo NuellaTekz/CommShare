@@ -18,8 +18,7 @@ export function CreateEstate({ navigation }) {
     const [description, setDescription] = useState("");
     const [datereg, setDateReg] = useState("");
 
-    const estcreatepic = "https://cdn.britannica.com/22/215522-050-8315BB78/green-grass-close-up.jpg"
-
+    const estcreatepic = "https://static.vecteezy.com/system/resources/previews/047/072/042/non_2x/a-colorful-illustration-depicting-a-bustling-city-construction-scene-with-cranes-and-new-buildings-under-a-sunny-sky-free-vector.jpg"
     const handleCreateEstate = () => {
         if (!estateName || !location || !datereg) {
             Alert.alert("Missing Info", "Please fill in all required fields.");
@@ -36,57 +35,57 @@ export function CreateEstate({ navigation }) {
 
     return (
         <ScrollView>
-            <ImageBackground source={{uri: estcreatepic}}
-            style={styles.headerImage}>
+            <ImageBackground source={{ uri: estcreatepic }}
+                style={styles.headerImage}>
                 <View style={styles.header}>
-                    <Text style={styles.headerText}>🏡 Create New Estate Group</Text>
                 </View>
-                <View style={styles.form}>
-                <Text style={styles.label}>Estate Name *</Text>
-                <TextInput
-                    style={styles.input}
-                    value={estateName}
-                    onChangeText={setEstateName}
-                    placeholder="e.g., Sunrise Villas"
-                />
-
-                <Text style={styles.label}>Location *</Text>
-                <TextInput
-                    style={styles.input}
-                    value={location}
-                    onChangeText={setLocation}
-                    placeholder="e.g., Lagos, Nigeria"
-                />
-                <Text style={styles.label}>Date registered *</Text>
-                <TextInput
-                    style={styles.input}
-                    value={location}
-                    onChangeText={setDateReg}
-                    placeholder="DD / MM / YY"
-                />
-                <Text style={styles.label}>Location *</Text>
-                <TextInput
-                    style={styles.input}
-                    value={location}
-                    // onChangeText={setLocation}
-                    placeholder="e.g., Lagos, Nigeria"
-                />
-
-                <Text style={styles.label}>Description</Text>
-                <TextInput
-                    style={[styles.input, styles.textArea]}
-                    value={description}
-                    onChangeText={setDescription}
-                    placeholder="Optional details about the estate"
-                    multiline
-                    numberOfLines={4}
-                />
-
-                <TouchableOpacity style={styles.button} onPress={handleCreateEstate}>
-                    <Text style={styles.buttonText}>Create Estate</Text>
-                </TouchableOpacity>
-            </View>
             </ImageBackground>
+                    <Text style={styles.headerText}>🏡 Create New Estate Group</Text>
+                <View style={styles.form}>
+                    <Text style={styles.label}>Estate Name *</Text>
+                    <TextInput
+                        style={styles.input}
+                        value={estateName}
+                        onChangeText={setEstateName}
+                        placeholder="e.g., Sunrise Villas"
+                    />
+
+                    <Text style={styles.label}>Location *</Text>
+                    <TextInput
+                        style={styles.input}
+                        value={location}
+                        onChangeText={setLocation}
+                        placeholder="e.g., Lagos, Nigeria"
+                    />
+                    <Text style={styles.label}>Date registered *</Text>
+                    <TextInput
+                        style={styles.input}
+                        value={location}
+                        onChangeText={setDateReg}
+                        placeholder="DD / MM / YY"
+                    />
+                    <Text style={styles.label}>Location *</Text>
+                    <TextInput
+                        style={styles.input}
+                        value={location}
+                        // onChangeText={setLocation}
+                        placeholder="e.g., Lagos, Nigeria"
+                    />
+
+                    <Text style={styles.label}>Description </Text>
+                    <TextInput
+                        style={[styles.input, styles.textArea]}
+                        value={description}
+                        onChangeText={setDescription}
+                        placeholder="Optional details about the estate"
+                        multiline
+                        numberOfLines={4}
+                    />
+
+                    <TouchableOpacity style={styles.button} onPress={handleCreateEstate}>
+                        <Text style={styles.buttonText}>Submit Details</Text>
+                    </TouchableOpacity>
+                </View>
         </ScrollView>
     );
 }
@@ -95,13 +94,16 @@ const styles = StyleSheet.create({
     container: {
 
     },
-    headerImage:{
-        flex:1
+    headerImage: {
+        flex: 1,
+        width:"100%",
+        height:"100%",
+
     },
     header: {
         justifyContent: "center",
         alignItems: "center",
-        height: 80,
+        height: 100,
         width: "100%",
         borderWidth: 0,
         marginBottom: 10,
@@ -110,21 +112,22 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: "bold",
         fontFamily: Theme.fonts.text700,
-        color: Theme.colors.yellow,
+        color: Theme.colors.red,
         textAlign: "center",
-        marginTop:30
+        marginTop: 35
 
     },
     form: {
         padding: 20,
-        paddingTop: 15,
-        backgroundColor: "#fff",
+        paddingTop: 35,
+        backgroundColor: "#ffffff99",
         flexGrow: 1,
         fontFamily: Theme.fonts.text400,
-        borderRadius:20,
-        borderBottomRightRadius:0,
-        borderBottomLeftRadius:0,
-        gap:5
+        borderRadius: 20,
+        borderBottomRightRadius: 0,
+        borderBottomLeftRadius: 0,
+        gap: 5,
+        height: "100%",
     },
     label: {
         fontSize: Theme.sizes.md,
